@@ -1,16 +1,21 @@
 import React from 'react';
 import LineChart from './components/LineChart';
 import BarChart from './components/BarChart';
+import './App.css'; // External CSS file for styling
 
 const App = () => {
   return (
-    <div>
-      <h1>Chart.js Graphs in React</h1>
-      <div style={{ width: '600px', margin: '0 auto' }}>
-        <h2>Line Chart</h2>
-        <LineChart />
-        <h2>Bar Chart</h2>
-        <BarChart />
+    <div className="app-container">
+      <h1 className="app-title">Dashboard: Kit Status Overview</h1>
+      <div className="charts-container">
+        <div className="chart-card">
+          <h2 className="chart-title">Kit Online Status</h2>
+          <LineChart />
+        </div>
+        <div className="chart-card">
+          <h2 className="chart-title">Kit Offline Status</h2>
+          <BarChart />
+        </div>
       </div>
     </div>
   );
